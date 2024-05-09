@@ -22,8 +22,8 @@ This repository hosts a suite of R and shell scripts designed for the comprehens
 ### Cloning the Repository
 To use these tools, start by cloning this repository:
 ```bash
-git clone https://github.com/yourusername/multi-omics-bgc-analysis.git
-cd multi-omics-bgc-analysis
+git clone https://github.com/yourusername/multi-omics_bgc_analysis.git
+cd multi-omics_bgc_analysis
 ```
 
 ## Setup
