@@ -6,10 +6,9 @@ This repository hosts a suite of R and shell scripts designed for the comprehens
 
 ### Features
 
-- **Gene Cluster Identification**: Utilizes RAST annotation integrated within a shell script for genome mining, and tBLASTn to identify BGCs based on protein sequences from UniProt.
+- **Gene Cluster Identification**: Utilizes RAST annotation and tBLASTn to identify genetic elements and presence of BGCs.
 - **Data Visualization and Analysis**: Provides R scripts for visualizing gene distributions and relationships, aiding in the interpretation of complex genomic data.
 - **Mass Spectrometry Data Analysis**: R scripts analyze mass spectrometry data to identify potential metabolites related to BGCs, linking genomic data with biochemical outputs.
-- **Metabolite Correlation Representation**: Additional R scripts visualize the correlation between detected ions and identified gene clusters, facilitating a deeper understanding of metabolic pathways.
 
 ## Installation
 
