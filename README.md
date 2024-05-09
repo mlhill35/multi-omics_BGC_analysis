@@ -2,16 +2,58 @@
 
 ## Overview
 
-This repository contains a collection of scripts and tools designed to facilitate genome mining and annotation of biosynthetic gene clusters (BGCs) involved in the production of known specialized/secondary metabolites. The pipeline provided herein allows researchers to verify the presence of these BGCs in sample genomes, but also to analyze and correlate them with mass spectrometry data to predict their presence in samples (environmental or otherwise).
+This repository hosts a suite of R and shell scripts designed for the comprehensive analysis of biosynthetic gene clusters (BGCs). These scripts facilitate genome mining, annotation of BGCs, and the integration of genomic data with metabolomics, enhancing the study of secondary metabolites produced by various organisms.
 
-Key components of this repository include:
+### Features
 
-- **Gene Cluster Identification**: Utilizes RAST annotation for genome mining and a shell script leveraging tBLASTn to identify BGCs using protein sequence files downloaded from UniProt. 
+- **Gene Cluster Identification**: Utilizes RAST annotation integrated within a shell script for genome mining, and tBLASTn to identify BGCs based on protein sequences from UniProt.
+- **Data Visualization and Analysis**: Provides R scripts for visualizing gene distributions and relationships, aiding in the interpretation of complex genomic data.
+- **Mass Spectrometry Data Analysis**: R scripts analyze mass spectrometry data to identify potential metabolites related to BGCs, linking genomic data with biochemical outputs.
+- **Metabolite Correlation Representation**: Additional R scripts visualize the correlation between detected ions and identified gene clusters, facilitating a deeper understanding of metabolic pathways.
 
-- **Data Visualization and Analysis**: R scripts are provided to generate figures that visualize the genes identified, complementing the genomic data analysis. These scripts help in interpreting the complex data and facilitate easier understanding of gene distribution and relationships.
+## Installation
 
-- **Mass Spectrometry Data Analysis**: A Python script analyzes mass spec data, including precursor ions and MS2 fragment ions, to identify potential metabolites associated with the biosynthetic gene clusters identified earlier in the pipeline. This script is crucial for linking genomic data with actual biochemical output.
+### Prerequisites
+- R (version 4.2.3)
+- RStudio (recommended for running R scripts)
+- Shell environment (e.g., Bash on Linux/Unix or Git Bash on Windows)
+- BLAST+ command-line tools
 
-- **Metabolite Correlation Representation**: Further R scripts are included to represent the presence of ions correlated with the identified gene clusters. This allows for a more targeted approach in understanding the metabolic pathways and their outputs.
+### Cloning the Repository
+To use these tools, start by cloning this repository:
+```bash
+git clone https://github.com/yourusername/multi-omics-bgc-analysis.git
+cd multi-omics-bgc-analysis
+```
 
-This pipeline is aimed at interdisciplinary researchers who require a multi-omics approach to integrate genomic data with metabolic profiling for the characterization of known secondary metabolites. By using this toolkit, researchers can streamline their analysis process, from gene cluster identification to metabolite prediction.
+## Setup
+Ensure R is installed on your system by checking the version, which should be at least 4.2.3:
+```bash
+R --version
+```
+To install necessary R packages:
+```bash
+install.packages(c("dplyr", "ggplot2", "tidyr", "gridExtra"))
+```
+
+## Usage
+
+### Gene Cluster Identification
+Run the shell script tblastn_bgc.sh to identify gene clusters:
+```bash
+./tblastn_bgc.sh path/to/genome.fasta path/to/protein_sequences_folder e_value_cutoff
+```
+### Data Analysis and Visualization
+Provided that your data files are named the same as those provided under the example_data older, execute the R scripts to analyze and visualize genomic and mass spectrometry data:
+```bash
+Rscript RAST_data_analysis.R
+Rscript blast_data_analysis.R
+Rscript mass_spec_mining.R
+Rscript mass_spec_data_analysis.R
+```
+
+## Contributing
+Contributions to enhance or extend the functionality of these scripts are welcome. Please fork the repository, make your changes, and submit a pull request.
+
+## License
+This project is licensed under the MIT License.
