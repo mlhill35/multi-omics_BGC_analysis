@@ -17,13 +17,13 @@ This repository hosts a suite of R and shell scripts designed for the comprehens
 - R (version 4.2.3)
 - RStudio (recommended for running R scripts)
 - Shell environment (e.g., Bash on Linux/Unix or Git Bash on Windows)
-- BLAST+ command-line tools
+- BLAST+ (version 2.13)
 
 ### Cloning the Repository
 To use these tools, start by cloning this repository:
 ```bash
-git clone https://github.com/yourusername/multi-omics_bgc_analysis.git
-cd multi-omics_bgc_analysis
+git clone https://github.com/mlhill35/multi-omics_BGC_analysis.git
+cd multi-omics_BGC_analysis
 ```
 
 ## Setup
