@@ -58,12 +58,13 @@ contig_summary <- hypothetical_data %>%
 plot <- ggplot(contig_summary, aes(x = contig_id, y = total_protein_length, fill = total_protein_length)) +
   geom_col() +
   coord_flip() +  # Flipping coordinates to put contig_id on the y-axis
-  scale_fill_gradient(low = "blue", high = "red") +  # Gradient fill based on total_protein_length
+  scale_fill_gradient(low = "blue", high = "red", guide = "none") +  # Gradient fill without legend
   labs(title = "Total Hypothetical Protein Length by Contig",
-       x = "Total Protein Length",
-       y = "Contig") +  # Corrected axis labels as coord_flip swaps the axes
+       x = "Contig",
+       y = "Length") +  # Corrected axis labels as coord_flip swaps the axes
   theme_minimal() +  # Apply minimal theme
-  theme(axis.text.y = element_text(size = 5, angle = 35))  # Adjust font size and angle of y-axis labels
+  theme(axis.text.y = element_text(size = 4, angle = 20))  # Adjust font size and angle of y-axis labels
 
 # Display the plot
 print(plot)
+
